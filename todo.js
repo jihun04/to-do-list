@@ -325,18 +325,18 @@ function loadRefresh() {
 }
 
 function handleChangeToDo() {
-    let currentProgress = parseInt(toDoProgress.innerText.split("%")[0]);
+    const currentProgress = parseInt(toDoProgress.innerText.split("%")[0]);
     const progress = Math.ceil(toDosDone.length / (toDos.length + toDosDone.length) * 100);
-    console.log(currentProgress, progress);
-    do {
+    const diff = Math.abs(progress - currentProgress);
+    for (let i = 0; i <= diff; i++) {
         if (currentProgress < progress) {
-            currentProgress += 1;
-        } else {
-            currentProgress -= 1;
+            toDoProgressBar.style.width = `${currentProgress + i}%`;
+            toDoProgress.innerText = `${currentProgress + i}%`;
+        } else if (currentProgress > progress) {
+            toDoProgressBar.style.width = `${currentProgress - i}%`;
+            toDoProgress.innerText = `${currentProgress - i}%`;
         }
-        toDoProgressBar.style.width = `${currentProgress}%`;
-        toDoProgress.innerText = `${currentProgress}%`;
-    } while (progress !== currentProgress);
+    };
 }
 
 function init() {
