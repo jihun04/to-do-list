@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <meta property="og:image" content="images/ogimage.jpg" />
+    <meta property="og:title" content="Imagentum" />
+    <meta property="og:description" content="Momentum in your life" />
+    <script>
+      window.addEventListener("error", function() {
+        alert("Refresh😊");
+      })
+    </script>
+  </head>
+
+  <body>
+    <main>
+      <div class="column">
+        <div class="column__column">
+          <span class="weather-text">
+            <div class="weather-text__text">
+              <div class="weather-icon"></div>
+              <span class="js-weather"></span>
+            </div>
+            <div class="weather-description">
+              <span class="weather-description__text"></span>
+              <i class="js-weather-icon"></i>
+            </div>
+          </span>
+        </div>
+        <div class="column__column">
+          <div class="link-btn">
+            <i class="fas fa-link"></i>
+            <span>link</span>
+          </div>
+          <div class="js-img-name-text">
+            <span class="js-img-name"></span
+            ><span class="unsplash cursor--pointer">-unsplash</span
+          ></div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="toDo-box">
+          <form class="ja-toDoFrom">
+            <input required type="text" placeholder="Write a to do" />
+          </form>
+          <div class="toDo-bar-box">
+            <div class="toDo-bar appear-toDo-bar">
+              <span>Close</span>
+              <div class="toDo-progress-bar"></div>
+              <span class="toDo-progress">0%</span>
+            </div>
+          </div>
+          <ul class="js-toDoList toDoList--close"></ul>
+          <ul class="js-toDoList--done toDoList--close"></ul>
+          <div class="toDoLists-btns appear-toDoLists-btns">
+            <button class="toDoLists-btns__toDo-btn">To do</button>
+            <button class="toDoLists-btns__done-btn">Done</button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="column__column">
+          <div class="timestamp">
+            <span></span>
+          </div>
+          <div class="js-clock">
+            <h1 class="js-title"></h1>
+            <h2 class="clock-am-pm none"></h2>
+            <i class="fas fa-exchange-alt clock-exchange-btn"></i>
+          </div>
+          <form class="js-form none">
+            <input required type="text" placeholder="What is your name" />
+          </form>
+          <h4 class="js-greetings none"></h4>
+        </div>
+        <div class="column__column">
+          <div class="search-box">
+            <form class="search-form">
+              <div class="search-with">
+                <div class="search-with-btn">
+                  <span class="search-with-first-text"></span>
+                  <i class="fas fa-chevron-up"></i>
+                </div>
+                <div class="search-with-list-box">
+                  <div class="search-header">
+                    <span>search with</span>
+                  </div>
+                  <ul class="search-with-list"></ul>
+                </div>
+              </div>
+              <input required type="text" />
+              <div class="search-btn">
+                <i class="fas fa-search"></i>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <i class="fas fa-chevron-down arrow-icon"></i>
+    </main>
+    <div class="bgImage--basic bgImage--z-index--2"></div>
+    <div class="show-image-screen hidden">
+      <div class="show-image-screen__row-top">
+        <i></i>
+        <i class="fas fa-times show-image-screen__times"></i>
+      </div>
+      <div class="show-image-screen__row-center">
+        <div class="showed-image"></div>
+        <div class="arrow-row">
+          <i class="fas fa-chevron-left show-image-screen__left"></i>
+          <i class="fas fa-chevron-right show-image-screen__right"></i>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <button class="random-btn">
+          <div class="check-box-quadrangle">
+            <i class="fas fa-check"></i>
+          </div>
+          random
+        </button>
+        <form class="image-url-form">
+          <input class="input--border-right-radius" required type="url" placeholder="Write a image address" />
+        </form>
+        <form class="link-form none">
+          <input class="input--not-border-radius link-name-input" required type="text" placeholder="Write a name" />
+          <input class="input--border-right-radius link-url-input" required type="url" placeholder="Write a link" />
+          <input class="none" type="submit">
+        </form>
+        <i class="fas fa-plus times image-url-form__times"></i>
+      </div>
+      <div class="image-columns">
+        <div class="image-column1"></div>
+        <div class="image-column2"></div>
+      </div>
+      <ul class="link-list"></ul>
+    </footer>
+    <div class="splash-screen splash-screen--paint">
+      <div class="splash-screen__box">
+        <div class="splash-screen__text"></div>
+        <div class="splash-screen__text"></div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/fbdaada10a.js" crossorigin="anonymous"></script>
+    <script src="greeting.js"></script>
+    <script src="clock.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
+    <script src="screen.js"></script>
+    <script src="scroll.js"></script>
+    <script src="load-image.js"></script>
+    <script src="link.js"></script>
+    <script src="search.js"></script>
+    <script src="splash-screen.js"></script>
+  </body>
+</html>

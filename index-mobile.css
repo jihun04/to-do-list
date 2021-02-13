@@ -1,0 +1,25 @@
+:root {
+  --bg-black: rgba(0, 0, 0, 0.45);
+  --bg-white: rgba(255, 255, 255, 0.45);
+  --black: rgba(0, 0, 0, 0.9);
+  --white: rgba(255, 255, 255, 0.9);
+  --gray: rgba(255, 255, 255, 0.6);
+  --alpha-zero: rgba(0, 0, 0, 0);
+  --radius: 10px;
+  --translate-y-down: 10px;
+  --translate-y-up: -10px;
+  --input-height: 40px;
+  --input-padding: 10px;
+  --font-size: 19px;
+  --toDo-box-width: 225px;
+}
+.js-weather-icon {
+  position: absolute;
+  right: -1.4em;
+}
+.toDoLists-btns * {
+  width: 90px;
+}
+.toDo-text {
+  width: 180px;
+}
